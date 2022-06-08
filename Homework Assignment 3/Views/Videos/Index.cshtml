@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Homework_Assignment_3.Models.VideoModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Videos</h2>
+<p>Videos of any Size</p>
+
+
+<div class="jumbotron">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VideoName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DownloadOption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeleteOption)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VideoName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DownloadOption)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeleteOption)
+                </td>
+
+            </tr>
+
+        }
+    </table>
+</div>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Homework_Assignment_3.Models.ImageModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Images</h2>
+<p>Media of any File size</p>
+
+<div class="jumbotron">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DownloadOption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeleteOption)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DownloadOption)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeleteOption)
+                </td>
+
+            </tr>
+
+        }
+    </table>
+</div>
+
+
+
